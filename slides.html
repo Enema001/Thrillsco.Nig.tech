@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>slides</title>
+        <link rel="stylesheet" type="text/css" href="slides.css">
+    </head>
+    <body>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+        <div class="slide-img"><img src="https://res.cloudinary.com/enema/image/upload/c_scale,w_100/v1573137843/Edem_mzj43e.jpg" style="border-radius: 50%;"></div>
+      <q>Great dedication and constant communication at all stages. Top apps with great features.</q>
+      <p class="author">- Mr Edem TU<br>UNICAL</p>
+    </div>
+  
+    <div class="mySlides">
+        <div class="slide-img"><img src="https://res.cloudinary.com/enema/image/upload/c_scale,w_100/v1573137852/uwem_ya0wia.jpg" style="border-radius: 50%;"></div>
+      <q>What a team! strong, energetic men with dedication and consistency. The best in town in web development.</q>
+      <p class="author">-Dr Umoh UF<br>UNIUYO</p>
+    </div>
+  
+    <div class="mySlides">
+        <div class="slide-img"><img src="https://res.cloudinary.com/enema/image/upload/c_scale,w_100/v1573137839/74908184_545734219569963_901870938054721536_n_jlhdjl.jpg" style="border-radius: 50%;"></div>
+      <q>With the help of Thrillsco, my business has been turned around through the development of ecommerce website. They are the best.</q>
+      <p class="author">-Mr Oguama Keneth<br> CEO OGU Enterprises.</p>
+    </div>
+  
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <script>var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        <script>var slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}
+                  slides[slideIndex-1].style.display = "block";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }</script>
+
+  <body>
+  </html>
